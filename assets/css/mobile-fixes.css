@@ -1,0 +1,161 @@
+/* UV Consultants — mobile alignment fixes.
+   Loaded LAST on every page (after precise-look.css) so it can correct
+   rules that precise-look.css forces with !important.
+   Everything layout-related lives inside max-width media queries,
+   so the desktop design is untouched. */
+
+/* ---------- global guards (all sizes, safe) ---------- */
+html { overflow-x: hidden; -webkit-text-size-adjust: 100%; }
+body { overflow-x: clip; }
+img, video, iframe { max-width: 100%; }
+p, li, h1, h2, h3, h4, h5 { overflow-wrap: break-word; }
+
+/* ---------- tablets and below (<= 991px) ---------- */
+@media (max-width: 991px) {
+  .pl-wrap { padding: 0 20px; }
+  .pl-sec { padding: 56px 0; }
+  .pl-two { gap: 44px; }
+  .pl-hero { min-height: 0; padding: 80px 0 70px; }
+  .pl-hero p { max-width: 100%; }
+  .pl-img { max-width: 560px; margin: 0 auto; width: 100%; }
+  /* badge sits inside the photo so it never pokes outside the screen */
+  .pl-badge { left: 14px; bottom: 14px; padding: 16px 22px; }
+  .pl-badge b { font-size: 40px; }
+  .pl-split .r { padding: 48px 24px; }
+}
+
+/* ---------- phones (<= 767px) ---------- */
+@media (max-width: 767px) {
+  /* top bar: stack email + phone, centred, no overflow */
+  .pl-top { font-size: 13px; }
+  .pl-top .in { padding: 8px 16px; justify-content: center; text-align: center; }
+  .pl-top .in > div { display: flex; flex-wrap: wrap; justify-content: center; gap: 4px 16px; width: 100%; }
+  .pl-top a { margin-right: 0; }
+
+  /* page banner on inner pages: precise-look forces 80px with !important */
+  .uv-page-head { padding: 44px 0 46px !important; }
+  .uv-page-head h1 { font-size: clamp(26px, 8vw, 34px); line-height: 1.2; }
+  .uv-crumbs { flex-wrap: wrap; row-gap: 4px; }
+
+  /* shared buttons: comfortable tap size, never overflow */
+  .uv-btn, .uv-btn--primary, .pl-btn { padding: 14px 24px; font-size: 14px; min-height: 46px; justify-content: center; text-align: center; }
+  .uv-btn--sm { padding: 11px 18px !important; font-size: 13px !important; }
+}
+
+/* ---------- small phones (<= 575px) ---------- */
+@media (max-width: 575px) {
+  .pl-wrap { padding: 0 16px; }
+  .pl-sec { padding: 48px 0; }
+
+  /* hero */
+  .pl-hero { padding: 64px 0 56px; }
+  .pl-hero h1 { font-size: clamp(30px, 9vw, 38px); margin: 12px 0 16px; }
+  .pl-hero p { font-size: 16px; line-height: 1.65; }
+  .pl-lbl { font-size: 13px; gap: 10px; flex-wrap: wrap; }
+  .pl-lbl::before, .pl-lbl.c::after { width: 28px; flex: 0 0 28px; }
+  .pl-acts { flex-direction: column; align-items: stretch; gap: 12px; margin-top: 24px; }
+  .pl-acts > * { width: 100% !important; }
+  .pl-chips { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 30px; }
+  .pl-chips a { padding: 12px 12px; font-size: 13px; }
+  .pl-chips a small { font-size: 11px; line-height: 1.35; }
+
+  /* welcome block */
+  .pl-h2 { font-size: clamp(24px, 7vw, 30px); }
+  .pl-ft { grid-template-columns: 1fr 1fr 1fr; gap: 8px; }
+  .pl-ft i { width: 58px; height: 58px; font-size: 22px; }
+  .pl-ft b { font-size: 13px; line-height: 1.3; display: block; }
+  .pl-row { flex-direction: column; align-items: stretch; gap: 20px; }
+  .pl-row .pl-btn { width: 100%; }
+  .pl-call { justify-content: center; }
+  .pl-call a { font-size: 18px; }
+  .pl-badge b { font-size: 34px; }
+
+  /* home section buttons */
+  .ps-btn, .lo-btn, .x-btn, .us-btn, .ct-btn {
+    display: flex; align-items: center; justify-content: center;
+    width: 100%; max-width: 360px; margin-left: auto; margin-right: auto;
+    padding: 15px 24px; box-sizing: border-box; text-align: center;
+  }
+  .us-row, .wy-row { flex-direction: column; align-items: stretch; gap: 20px; }
+  .us-call, .wy-call { justify-content: center; }
+  .us-row .us-btn, .wy-row .x-btn { max-width: none; }
+
+  /* section headings */
+  .ps-head, .lo-head, .x-head, .sv-head, .cp-head { margin-bottom: 44px; }
+  .ps-head { margin-bottom: 60px; }
+  .ps-tag, .lo-lbl, .x-lbl, .us-lbl { font-size: 12px; letter-spacing: .1em; padding: 8px 14px; }
+  .ps-cta, .lo-cta { margin-top: 44px; }
+
+  /* services cards: centred, readable width */
+  .ps-card { max-width: 100%; }
+  .ps-no { font-size: 60px; }
+
+  /* image frames: keep floating chips inside the screen */
+  .us-chip.c1, .wy-chip.c1 { right: -6px; left: auto; top: -12px; }
+  .wy-chip.c1 { left: -6px; right: auto; }
+  .us-chip.c2 { left: -6px; }
+  .us-chip.c3 { right: 24px; }
+  .wy-chip.c2 { right: -6px; }
+  .us-frame, .wy-frame { padding: 12px; }
+
+  /* checklist / feature tiles */
+  .us-checks li { padding: 14px 14px 14px 54px; font-size: 14px; }
+  .wy-b { padding: 16px; }
+  .ob-trust { padding: 26px 18px; }
+  .ob-trust h3 { font-size: 21px; }
+  .ob-pills span { padding: 9px 16px; font-size: 13px; }
+  .hs-step { padding: 58px 18px 26px; }
+
+  /* contact card (home + services + about) */
+  .ct-item { padding: 14px; gap: 12px; }
+  .ct-ico { flex-basis: 44px; width: 44px; height: 44px; }
+  .ct-field input, .ct-field textarea { font-size: 16px; } /* stops iOS zoom-on-focus */
+  .ct-send { width: 100%; }
+
+  /* contact page */
+  .cp-card, .ab-card2 { border-radius: 22px; }
+  .cp-pin { left: 12px; right: 12px; bottom: 12px; padding: 12px 14px; gap: 10px; }
+  .cp-map { min-height: 380px; }
+  .cp-cta-row { flex-direction: column; align-items: stretch; }
+  .cp-cta-row > * { justify-content: center; text-align: center; }
+  .form-one input, .form-one textarea, .form-one select,
+  .cp-form input, .cp-form textarea, .cp-form select { font-size: 16px; }
+
+  /* about page */
+  .ab-cta__money { display: none; }
+  .ab-cta { padding: 40px 20px; }
+  .ab-exp .t { max-width: 90px; font-size: 12px; }
+  .ab-note { padding: 14px; gap: 12px; }
+  .ab-note .ic { flex-basis: 44px; width: 44px; height: 44px; }
+
+  /* services page cards */
+  .sv-head { margin-bottom: 40px; }
+  .sv-grid { gap: 22px; }
+  .sv-cta h2 { font-size: clamp(24px, 7vw, 30px); }
+
+  /* older inner pages (s1–s25, loan-*) */
+  .service-details, .contact-one, .quick-loan-one { overflow-x: hidden; }
+  .service-details .row > [class*="col-"] { min-width: 0; }
+  .contact-map iframe, .google-map iframe { width: 100%; }
+  .uv-aside__box, .uv-aside__help { padding-left: 18px; padding-right: 18px; }
+
+  /* footer */
+  .uv-footer__bottom { text-align: center; }
+  .uv-footer__bottom > * { justify-content: center; text-align: center; }
+}
+
+/* ---------- very small phones (<= 380px) ---------- */
+@media (max-width: 380px) {
+  .pl-chips { grid-template-columns: 1fr; }
+  .pl-ft { grid-template-columns: 1fr; }
+  .pl-ft div { display: flex; align-items: center; gap: 14px; text-align: left; }
+  .pl-ft i { margin: 0; flex: 0 0 58px; }
+  .lo-card { max-width: 100%; }
+  .uv-header__logo img { height: 28px; }
+}
+
+/* ---------- touch devices: no sticky hover shifts that cause sideways scroll ---------- */
+@media (hover: none) {
+  .us-checks li:hover { transform: none; }
+  .ct-item.ct-in.ct-done:hover { transform: none; }
+}

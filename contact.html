@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en" id="top">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Contact Us | UV Consultants</title>
+<link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicons/apple-touch-icon.png" />
+<link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicons/favicon-32x32.png" />
+<link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicons/favicon-16x16.png" />
+<link rel="manifest" href="assets/images/favicons/site.webmanifest" />
+<meta name="description" content="UV Consultants is a multi-disciplinary firm of Accountants, Tax Consultants and Professional Business Consultants offering accounting, taxation, payroll, company formation, and compliance services." />
+<meta name="keywords" content="accounting, taxation, payroll, company formation, business consultancy, professional advisory, compliance services" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com/" />
+<link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400..800&amp;display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="assets/vendors/bootstrap/css/bootstrap.min.css" />
+<link rel="stylesheet" href="assets/vendors/bootstrap-select/bootstrap-select.min.css" />
+<link rel="stylesheet" href="assets/vendors/animate/animate.min.css" />
+<link rel="stylesheet" href="assets/vendors/fontawesome/css/all.min.css" />
+<link rel="stylesheet" href="assets/vendors/jquery-ui/jquery-ui.css" />
+<link rel="stylesheet" href="assets/vendors/jarallax/jarallax.css" />
+<link rel="stylesheet" href="assets/vendors/jquery-magnific-popup/jquery.magnific-popup.css" />
+<link rel="stylesheet" href="assets/vendors/nouislider/nouislider.min.css" />
+<link rel="stylesheet" href="assets/vendors/nouislider/nouislider.pips.css" />
+<link rel="stylesheet" href="assets/vendors/tiny-slider/tiny-slider.css" />
+<link rel="stylesheet" href="assets/vendors/easilon-icons/style.css" />
+<link rel="stylesheet" href="assets/vendors/owl-carousel/css/owl.carousel.min.css" />
+<link rel="stylesheet" href="assets/vendors/owl-carousel/css/owl.theme.default.min.css" />
+<link rel="stylesheet" href="assets/vendors/slick/slick.css" />
+<link rel="stylesheet" href="assets/css/easilon.css?v=1791094768973" />
+<link href="assets/css/uv-theme.css" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<link href="assets/css/precise-look.css" rel="stylesheet" />
+<link href="assets/css/mobile-fixes.css" rel="stylesheet" />
+<script>document.documentElement.classList.add("uv-js");</script>
+
+<style>
+/* =========================================================
+   CONTACT PAGE  (same palette as home / services)
+   navy #0a2a4a | blue #1769aa | sky #38a3e8 | mist #e6f2fc
+   ========================================================= */
+@keyframes cpFloat{0%,100%{transform:translate(0,0) scale(1)}50%{transform:translate(40px,-50px) scale(1.1)}}
+@keyframes cpBob{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
+@keyframes cpPulse{0%{transform:scale(.85);opacity:.7}100%{transform:scale(1.45);opacity:0}}
+@keyframes cpShine{to{background-position:300% 0}}
+
+/* ---------- pop-in reveal (left / right / up) ---------- */
+.cp-rv{opacity:0;transition:transform .9s cubic-bezier(.34,1.45,.64,1),opacity .6s ease,box-shadow .35s,border-color .35s,background .3s}
+.cp-rv.l{transform:translateX(-120px) scale(.85) rotate(-3deg)}
+.cp-rv.r{transform:translateX(120px) scale(.85) rotate(3deg)}
+.cp-rv.u{transform:translateY(60px) scale(.85)}
+.cp-rv.cp-in{opacity:1;transform:none;transition-delay:calc(var(--i,0) * 110ms),calc(var(--i,0) * 110ms),0s,0s,0s}
+.cp-rv.cp-done{transition-delay:0s}
+
+/* ---------- 1. BANNER ---------- */
+.cp-hero{position:relative;overflow:hidden;padding:90px 20px 100px;text-align:center;isolation:isolate;
+  background:linear-gradient(160deg,#0a2a4a 0%,#1769aa 60%,#0e4a80 100%)}
+.cp-hero .blob{position:absolute;border-radius:50%;filter:blur(80px);opacity:.5;z-index:-1;animation:cpFloat 16s ease-in-out infinite}
+.cp-hero .b1{width:380px;height:380px;background:#38a3e8;top:-120px;left:-100px}
+.cp-hero .b2{width:340px;height:340px;background:#7cc0f2;bottom:-140px;right:-100px;animation-delay:-7s}
+.cp-crumbs{list-style:none;margin:0 0 18px;padding:0;display:flex;justify-content:center;gap:10px;font-size:14px;font-weight:600;color:rgba(255,255,255,.8)}
+.cp-crumbs a{color:#bfe3fb;text-decoration:none}
+.cp-crumbs li+li::before{content:"/";margin-right:10px;opacity:.6}
+.cp-hero h1{margin:0 0 14px;font-size:clamp(34px,5vw,56px);line-height:1.15;color:#fff;font-weight:800}
+.cp-hero h1 em{font-style:normal;background:linear-gradient(90deg,#7dd3fc,#38bdf8,#bae6fd);-webkit-background-clip:text;background-clip:text;color:transparent}
+.cp-hero p{max-width:640px;margin:0 auto;font-size:17px;line-height:1.7;color:rgba(255,255,255,.82)}
+
+/* ---------- 2. INFO CARDS ---------- */
+.cp-info{position:relative;overflow:hidden;padding:100px 20px 40px;isolation:isolate;background:linear-gradient(135deg,#e6f2fc 0%,#f5faff 50%,#d9eafa 100%)}
+.cp-info .blob{position:absolute;border-radius:50%;filter:blur(80px);opacity:.5;z-index:-1;animation:cpFloat 16s ease-in-out infinite}
+.cp-info .b1{width:400px;height:400px;background:#7cc0f2;top:-120px;left:-120px}
+.cp-info .b2{width:360px;height:360px;background:#a8d8fa;bottom:-120px;right:-100px;animation-delay:-7s}
+.cp-wrap{position:relative;z-index:2;max-width:1200px;margin:0 auto}
+.cp-head{text-align:center;max-width:760px;margin:0 auto 70px}
+.cp-lbl{display:inline-block;font-size:13px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#1769aa;background:#fff;padding:8px 18px;border-radius:999px;box-shadow:0 6px 18px rgba(23,105,170,.22);margin-bottom:18px}
+.cp-h2{margin:0;font-size:clamp(26px,3.6vw,42px);line-height:1.2;color:#0a2a4a}
+.cp-h2 em{font-style:normal;background:linear-gradient(135deg,#1769aa,#38a3e8);-webkit-background-clip:text;background-clip:text;color:transparent}
+
+.cp-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:50px 28px}
+.cp-box{position:relative;padding:62px 24px 30px;text-align:center;border-radius:26px;background:#fff;border:1px solid #d4e8f8;box-shadow:0 14px 32px rgba(23,105,170,.12);text-decoration:none;display:block}
+.cp-box.cp-done:hover{transform:translateY(-14px) scale(1.03);border-color:#38a3e8;box-shadow:0 28px 48px rgba(23,105,170,.3)}
+.cp-box::after{content:"";position:absolute;left:24px;right:24px;bottom:0;height:4px;border-radius:4px 4px 0 0;background:linear-gradient(90deg,#1769aa,#38a3e8);transform:scaleX(0);transition:transform .4s}
+.cp-box:hover::after{transform:scaleX(1)}
+.cp-ico{position:absolute;top:-38px;left:50%;margin-left:-38px;width:76px;height:76px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:28px;color:#fff;
+  background:linear-gradient(135deg,#1769aa,#38a3e8);border:5px solid #fff;box-shadow:0 12px 26px rgba(23,105,170,.45);animation:cpBob 3s ease-in-out infinite;transition:transform .6s cubic-bezier(.34,1.7,.64,1)}
+.cp-ico::after{content:"";position:absolute;inset:-12px;border-radius:50%;border:2px solid #1769aa;opacity:.6;animation:cpPulse 2.4s ease-out infinite}
+.cp-box:hover .cp-ico{transform:rotate(360deg) scale(1.1)}
+.cp-box h3{margin:0 0 10px;font-size:20px;color:#0a2a4a}
+.cp-box p{margin:0;font-size:15.5px;line-height:1.65;color:#5a7490;word-break:break-word}
+.cp-box small{display:inline-block;margin-top:14px;font-size:13px;font-weight:700;color:#1769aa;background:#e6f2fc;padding:6px 16px;border-radius:999px;transition:all .3s}
+.cp-box:hover small{background:linear-gradient(135deg,#1769aa,#38a3e8);color:#fff}
+
+/* ---------- 3. FORM + MAP ---------- */
+.cp-main{position:relative;overflow:hidden;padding:60px 20px 100px;isolation:isolate;background:linear-gradient(135deg,#e6f2fc 0%,#f5faff 50%,#d9eafa 100%)}
+.cp-main .blob{position:absolute;border-radius:50%;filter:blur(80px);opacity:.45;z-index:-1;animation:cpFloat 16s ease-in-out infinite}
+.cp-main .b1{width:380px;height:380px;background:#38a3e8;top:20%;right:-120px}
+.cp-card{display:grid;grid-template-columns:1fr 1fr;border-radius:34px;overflow:hidden;background:#fff;box-shadow:0 40px 80px rgba(10,50,90,.28)}
+
+.cp-form{padding:56px 46px;display:flex;flex-direction:column;gap:16px;justify-content:center;background:linear-gradient(180deg,#fff,#f3f9ff)}
+.cp-fh{margin:0 0 4px;font-size:30px;line-height:1.2;color:#0a2a4a}
+.cp-fs{margin:0 0 8px;font-size:15px;color:#5a7490}
+.cp-field{position:relative}
+.cp-field i{position:absolute;left:18px;top:50%;transform:translateY(-50%);font-size:15px;color:#7ba3c4;transition:color .3s,transform .3s;pointer-events:none}
+.cp-field.ta i{top:22px;transform:none}
+.cp-field input,.cp-field select,.cp-field textarea{width:100%;box-sizing:border-box;padding:16px 18px 16px 48px;border:2px solid #d4e8f8;border-radius:16px;background:#fff;font:inherit;font-size:15.5px;color:#0a2a4a;outline:none;resize:vertical;appearance:none;-webkit-appearance:none;transition:border-color .3s,box-shadow .3s,transform .3s}
+.cp-field select{cursor:pointer;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='8' viewBox='0 0 14 8'%3E%3Cpath d='M1 1l6 6 6-6' fill='none' stroke='%231769aa' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 18px center}
+.cp-field input::placeholder,.cp-field textarea::placeholder{color:#8aa6bf}
+.cp-field input:focus,.cp-field select:focus,.cp-field textarea:focus{border-color:#1769aa;box-shadow:0 0 0 5px rgba(56,163,232,.22),0 12px 24px rgba(23,105,170,.15);transform:translateY(-2px)}
+.cp-field:focus-within i{color:#1769aa}
+.cp-send{display:inline-flex;align-items:center;justify-content:center;gap:12px;margin-top:6px;padding:17px 30px;border:0;border-radius:999px;cursor:pointer;font:inherit;font-weight:700;font-size:16px;color:#fff;
+  background:linear-gradient(90deg,#1769aa,#38a3e8,#1769aa);background-size:300% 100%;animation:cpShine 5s linear infinite;box-shadow:0 14px 30px rgba(23,105,170,.42)}
+.cp-send i{transition:transform .5s cubic-bezier(.34,1.7,.64,1)}
+.cp-send:hover i{transform:translate(8px,-8px) rotate(10deg)}
+.cp-send:active{transform:scale(.97)}
+
+.cp-map{position:relative;min-height:520px;background:#0a2a4a}
+.cp-map iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.cp-pin{position:absolute;left:20px;right:20px;bottom:20px;z-index:2;display:flex;align-items:center;gap:14px;padding:16px 18px;border-radius:20px;
+  background:rgba(10,42,74,.88);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,.22);color:#fff;text-decoration:none;box-shadow:0 14px 30px rgba(0,20,50,.4);transition:transform .3s}
+.cp-pin:hover{transform:translateY(-4px);color:#fff}
+.cp-pin i.a{flex:0 0 46px;height:46px;border-radius:14px;display:flex;align-items:center;justify-content:center;font-size:18px;color:#1769aa;background:#fff}
+.cp-pin span{font-size:14px;line-height:1.5}
+.cp-pin b{display:block;font-size:15px;color:#bfe3fb}
+
+/* ---------- 4. CTA STRIP ---------- */
+.cp-cta{position:relative;overflow:hidden;padding:90px 20px;text-align:center;isolation:isolate;background:linear-gradient(160deg,#0a2a4a 0%,#1769aa 55%,#0e4a80 100%)}
+.cp-cta .blob{position:absolute;border-radius:50%;filter:blur(80px);opacity:.5;z-index:-1;animation:cpFloat 16s ease-in-out infinite}
+.cp-cta .b1{width:360px;height:360px;background:#38a3e8;top:-120px;left:-100px}
+.cp-cta .b2{width:320px;height:320px;background:#7cc0f2;bottom:-120px;right:-80px;animation-delay:-7s}
+.cp-cta h2{margin:0 auto 14px;max-width:760px;font-size:clamp(26px,3.6vw,42px);line-height:1.2;color:#fff}
+.cp-cta p{margin:0 auto 28px;max-width:600px;font-size:16.5px;line-height:1.7;color:rgba(255,255,255,.82)}
+.cp-cta-row{display:flex;flex-wrap:wrap;justify-content:center;gap:16px}
+.cp-btn{display:inline-flex;align-items:center;gap:10px;padding:16px 38px;border-radius:999px;font-weight:700;text-decoration:none;color:#0a2a4a;
+  background:linear-gradient(90deg,#fff,#bfe3fb,#fff);background-size:300% 100%;animation:cpShine 5s linear infinite;box-shadow:0 14px 34px rgba(0,20,50,.4);transition:transform .4s cubic-bezier(.34,1.7,.64,1)}
+.cp-btn:hover{transform:scale(1.08) rotate(-1deg);color:#0a2a4a}
+.cp-btn.g{color:#fff;background:#25d366;animation:none;box-shadow:0 14px 34px rgba(37,211,102,.4)}
+.cp-btn.g:hover{color:#fff}
+
+/* ---------- RESPONSIVE ---------- */
+@media(max-width:991px){
+  .cp-cards{grid-template-columns:1fr;max-width:520px;margin:0 auto;row-gap:56px}
+  .cp-card{grid-template-columns:1fr}
+  .cp-form{padding:44px 30px}
+  .cp-map{min-height:420px}
+}
+@media(max-width:575px){
+  .cp-hero{padding:70px 16px 80px}
+  .cp-info{padding:70px 16px 30px}
+  .cp-main{padding:40px 14px 70px}
+  .cp-form{padding:36px 20px}
+  .cp-card{border-radius:26px}
+  .cp-fh{font-size:26px}
+  .cp-rv.l{transform:translateX(-70px) scale(.88)}
+  .cp-rv.r{transform:translateX(70px) scale(.88)}
+}
+/* ---------- MOBILE: simple, static layout (no scroll animations) ---------- */
+@media(max-width:991px){
+  /* show everything immediately - no pop-in / slide-in on scroll */
+  .cp-rv,.cp-rv.l,.cp-rv.r,.cp-rv.u{opacity:1!important;transform:none!important;transition:none!important}
+  .cp-box.cp-done:hover,.cp-pin:hover{transform:none!important}
+  /* stop decorative motion */
+  .cp-hero .blob,.cp-info .blob,.cp-main .blob,.cp-cta .blob,.cp-ico,.cp-ico::after,.cp-send,.cp-btn{animation:none!important}
+}
+@media(max-width:575px){
+  .cp-hero{padding:56px 16px 60px}
+  .cp-hero h1{font-size:34px}
+  .cp-hero p{font-size:15px}
+  .cp-info{padding:56px 16px 20px}
+  .cp-head{margin-bottom:46px}
+  .cp-cards{row-gap:52px;max-width:100%}
+  .cp-box{padding:54px 18px 24px}
+  .cp-box h3{font-size:19px}
+  .cp-box p{font-size:15px!important;line-height:1.6!important}
+  .cp-box p b{display:block;margin-top:6px;font-size:16px;color:#0a2a4a;word-break:break-all}
+  .cp-main{padding:30px 14px 56px}
+  .cp-form{padding:28px 18px}
+  .cp-field input,.cp-field select,.cp-field textarea{font-size:16px}
+  .cp-send{width:100%}
+  .cp-map{min-height:340px}
+  .cp-cta{padding:60px 16px}
+  .cp-cta-row{flex-direction:column;align-items:stretch}
+  .cp-btn{justify-content:center;padding:15px 24px}
+}
+@media(prefers-reduced-motion:reduce){
+  .cp-rv{opacity:1!important;transform:none!important;transition:none!important}
+  .cp-hero .blob,.cp-info .blob,.cp-main .blob,.cp-cta .blob,.cp-ico,.cp-ico::after,.cp-send,.cp-btn{animation:none!important}
+}
+</style>
+</head>
+
+<body>
+<div class="page-wrapper">
+<a class="uv-skip" href="#main">Skip to content</a>
+
+<div class="pl-top"><div class="in"><div><a href="mailto:uvconsultants.uv@gmail.com"><i class="far fa-envelope"></i>uvconsultants.uv@gmail.com</a><a href="tel:+919663784742"><i class="fas fa-phone-alt"></i>+91 96637 84742</a></div><span>Loans | Insurance | Financial Guidance</span></div></div>
+
+<header class="uv-header">
+  <div class="uv-container uv-header__inner">
+    <a class="uv-header__logo" href="index.html" aria-label="UV Consultants home">
+      <img src="assets/images/uv/logo-navy.png" alt="UV Consultants" width="159" height="42" />
+    </a>
+    <nav class="uv-nav main-menu" aria-label="Primary">
+      <ul class="main-menu__list">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li class="current"><a href="contact.html" aria-current="page">Contact Us</a></li>
+      </ul>
+    </nav>
+    <div class="uv-header__actions">
+      <a class="uv-header__phone" href="tel:+919663784742"><span><i class="fas fa-phone-alt" aria-hidden="true"></i></span><span>+91 96637 84742</span></a>
+      <a class="uv-btn uv-btn--primary uv-btn--sm uv-header__cta" href="contact.html">Book a Consultation</a>
+      <button class="uv-header__toggle mobile-nav__toggler" type="button" aria-label="Open menu" aria-controls="mobile-nav" aria-expanded="false"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+
+<!-- ============ BANNER ============ -->
+<section class="cp-hero" aria-labelledby="page-title">
+  <span class="blob b1" aria-hidden="true"></span><span class="blob b2" aria-hidden="true"></span>
+  <ol class="cp-crumbs"><li><a href="index.html">Home</a></li><li aria-current="page">Contact Us</li></ol>
+  <h1 id="page-title">Contact <em>Us</em></h1>
+  <p>Have a question about accounting, GST, payroll, compliance or loans? Talk to us — we reply quickly.</p>
+</section>
+
+<!-- ============ INFO CARDS ============ -->
+<section class="cp-info" id="cpInfo">
+  <span class="blob b1" aria-hidden="true"></span><span class="blob b2" aria-hidden="true"></span>
+  <div class="cp-wrap">
+    <div class="cp-head cp-rv u">
+      <div class="cp-lbl">Get in touch</div>
+      <h2 class="cp-h2">We&rsquo;re here to <em>help you</em></h2>
+    </div>
+
+    <div class="cp-cards">
+      <a class="cp-box cp-rv l" style="--i:0" href="https://maps.app.goo.gl/wpr8sgirX4NK6VsU7" target="_blank" rel="noopener">
+        <span class="cp-ico"><i class="fas fa-map-marker-alt"></i></span>
+        <h3>Our Address</h3>
+        <p>First Floor, No 1, Muni Chowdappa Building, Narasappa Road, Prashanth Nagar, Behind Ragavendra Nursing Home, T Dasarahalli, Bengaluru, Karnataka 560057</p>
+        <small>Get directions</small>
+      </a>
+
+      <a class="cp-box cp-rv u" style="--i:1" href="tel:+919663784742">
+        <span class="cp-ico"><i class="fas fa-phone-alt"></i></span>
+        <h3>Quick Contact</h3>
+        <p>Speak to Madhu directly<br><b>+91 96637 84742</b></p>
+        <small>Call now</small>
+      </a>
+
+      <a class="cp-box cp-rv r" style="--i:2" href="mailto:uvconsultants.uv@gmail.com">
+        <span class="cp-ico"><i class="fas fa-envelope"></i></span>
+        <h3>Support Email</h3>
+        <p>Send us your queries any time<br><b>uvconsultants.uv@gmail.com</b></p>
+        <small>Send email</small>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FORM + MAP ============ -->
+<section class="cp-main" id="cpMain">
+  <span class="blob b1" aria-hidden="true"></span>
+  <div class="cp-wrap">
+    <div class="cp-card cp-rv u">
+
+      <form class="cp-form" action="mail.php" method="post">
+        <h2 class="cp-fh cp-rv l">Leave us a message</h2>
+        <p class="cp-fs cp-rv l" style="--i:1">Fill in the form and we will get back to you shortly.</p>
+
+        <div class="cp-field cp-rv l" style="--i:2"><i class="fas fa-user"></i><input type="text" name="name" placeholder="Your Name" required></div>
+        <div class="cp-field cp-rv r" style="--i:3"><i class="fas fa-envelope"></i><input type="email" name="email" placeholder="Your Email" required></div>
+        <div class="cp-field cp-rv l" style="--i:4"><i class="fas fa-phone-alt"></i><input type="tel" name="phone" placeholder="Your Phone Number"></div>
+        <div class="cp-field cp-rv r" style="--i:5">
+          <i class="fas fa-list-ul"></i>
+          <select name="subject" aria-label="Subject">
+            <option value="" selected>Select Subject</option>
+            <option>Accounting &amp; Bookkeeping</option>
+            <option>GST &amp; Taxation</option>
+            <option>Payroll</option>
+            <option>Financial Statements</option>
+            <option>Audit &amp; Compliance</option>
+            <option>Loans</option>
+            <option>Insurance</option>
+            <option>Other</option>
+          </select>
+        </div>
+        <div class="cp-field ta cp-rv l" style="--i:6"><i class="fas fa-comment-dots"></i><textarea name="message" rows="4" placeholder="Write Message"></textarea></div>
+
+        <button class="cp-send cp-rv u" style="--i:7" type="submit">Send message <i class="fas fa-paper-plane"></i></button>
+      </form>
+
+      <div class="cp-map">
+        <iframe title="Map of UV Consultants, T Dasarahalli, Bengaluru" loading="lazy" allowfullscreen
+          src="https://maps.google.com/maps?q=T%20Dasarahalli,%20Bangalore&amp;t=&amp;z=13&amp;ie=UTF8&amp;iwloc=&amp;output=embed"></iframe>
+        <a class="cp-pin" href="https://maps.app.goo.gl/wpr8sgirX4NK6VsU7" target="_blank" rel="noopener">
+          <i class="a fas fa-location-arrow"></i>
+          <span><b>UV Consultants</b>T Dasarahalli, Bengaluru &ndash; 560057. Tap for directions.</span>
+        </a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============ CTA ============ -->
+<section class="cp-cta" id="cpCta">
+  <span class="blob b1" aria-hidden="true"></span><span class="blob b2" aria-hidden="true"></span>
+  <h2 class="cp-rv u">Your Accountability Partner - In Bangalore</h2>
+  <p class="cp-rv u" style="--i:1">Prefer a quick chat? Reach us on call or WhatsApp.</p>
+  <div class="cp-cta-row cp-rv u" style="--i:2">
+    <a class="cp-btn" href="tel:+919663784742"><i class="fas fa-phone-alt"></i> Call Now</a>
+    <a class="cp-btn g" href="https://wa.me/919663784742" target="_blank" rel="noopener"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+  </div>
+</section>
+
+</main>
+
+<footer class="uv-footer">
+  <div class="uv-container uv-footer__top">
+    <div>
+      <a class="uv-footer__logo" href="index.html" aria-label="UV Consultants home"><img src="assets/images/uv/logo-white.png" alt="UV Consultants" width="159" height="42" loading="lazy" /></a>
+      <p class="uv-footer__about">UV Consultants is a multi-disciplinary firm of Accountants, Tax Consultants and Professional Business Consultants, offering specialised services ranging from accounting, payroll services, taxation matters, company formation and business advice for enterprises.</p>
+      <a class="uv-btn uv-btn--primary uv-btn--sm" href="contact.html">Book a Consultation</a>
+    </div>
+    <div>
+      <h2 class="uv-footer__title">Quick Links</h2>
+      <ul class="uv-footer__links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+      </ul>
+    </div>
+    <div>
+      <h2 class="uv-footer__title">Services</h2>
+      <ul class="uv-footer__links uv-footer__links--cols">
+        <li><a href="s1.html">Accounting &amp; Bookkeeping</a></li>
+        <li><a href="s2.html">GST &amp; Taxation</a></li>
+        <li><a href="s3.html">Payroll</a></li>
+        <li><a href="s4.html">Financial Statements</a></li>
+        <li><a href="s5.html">Reconciliation</a></li>
+        <li><a href="s6.html">MIS Reporting</a></li>
+        <li><a href="s7.html">Tally Services</a></li>
+        <li><a href="s8.html">Audit Support</a></li>
+        <li><a href="s9.html">Compliance Services</a></li>
+        <li><a href="s10.html">Loan Services</a></li>
+      </ul>
+    </div>
+    <div>
+      <h2 class="uv-footer__title">Contact</h2>
+      <ul class="uv-footer__contact">
+        <li><i class="fas fa-user" aria-hidden="true"></i><span>Madhu</span></li>
+        <li><i class="fas fa-phone-alt" aria-hidden="true"></i><a href="tel:+919663784742">+91 9663784742</a></li>
+        <li><i class="fas fa-envelope" aria-hidden="true"></i><a href="mailto:uvconsultants.uv@gmail.com">uvconsultants.uv@gmail.com</a></li>
+        <li><i class="fas fa-map-marker-alt" aria-hidden="true"></i><span>First Floor, No 1, Muni Chowdappa Building, Narasappa Road, Prashanth Nagar, Behind Ragavendra Nursing Home, T Dasarahalli, Bengaluru, Karnataka 560057</span></li>
+      </ul>
+    </div>
+  </div>
+  <div class="uv-footer__bottom">
+    <div class="uv-container">
+      <p>&copy; <span class="dynamic-year">2026</span> UV Consultants. All rights reserved.</p>
+      <a href="#top">Back to top <i class="fas fa-arrow-up" aria-hidden="true"></i></a>
+    </div>
+  </div>
+</footer>
+</div>
+
+<div class="mobile-nav__wrapper" id="mobile-nav" aria-hidden="true">
+  <div class="mobile-nav__overlay mobile-nav__toggler"></div>
+  <div class="mobile-nav__content" role="dialog" aria-modal="true" aria-label="Site menu">
+    <button class="mobile-nav__close mobile-nav__toggler" type="button" aria-label="Close menu"><i class="fas fa-times" aria-hidden="true"></i></button>
+    <div class="logo-box"><a href="index.html" aria-label="UV Consultants home"><img src="assets/images/uv/logo-navy.png" alt="UV Consultants" width="136" height="36" /></a></div>
+    <div class="mobile-nav__container"></div>
+    <a class="uv-btn uv-btn--primary mobile-nav__cta" href="contact.html">Book a Consultation</a>
+    <ul class="mobile-nav__contact list-unstyled">
+      <li><span class="mobile-nav__contact__icon"><i class="fas fa-phone-alt" aria-hidden="true"></i></span><a href="tel:+919663784742">+91 9663784742</a></li>
+      <li><span class="mobile-nav__contact__icon"><i class="fas fa-envelope" aria-hidden="true"></i></span><a href="mailto:uvconsultants.uv@gmail.com">uvconsultants.uv@gmail.com</a></li>
+      <li><span class="mobile-nav__contact__icon"><i class="fab fa-whatsapp" aria-hidden="true"></i></span><a href="https://wa.me/919663784742" target="_blank" rel="noopener">Chat on WhatsApp</a></li>
+    </ul>
+  </div>
+</div>
+<button class="uv-to-top" type="button" aria-label="Back to top"><i class="fas fa-arrow-up" aria-hidden="true"></i></button>
+<div class="floating-buttons"><a class="whatsapp-button" href="https://wa.me/919663784742" target="_blank" rel="noopener" aria-label="Chat with UV Consultants on WhatsApp"><i class="fab fa-whatsapp" aria-hidden="true"></i></a></div>
+
+<script src="assets/vendors/jquery/jquery-3.7.0.min.js"></script>
+<script src="assets/vendors/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="assets/vendors/bootstrap-select/bootstrap-select.min.js"></script>
+<script src="assets/vendors/jarallax/jarallax.min.js"></script>
+<script src="assets/vendors/jquery-ui/jquery-ui.js"></script>
+<script src="assets/vendors/jquery-ajaxchimp/jquery.ajaxchimp.min.js"></script>
+<script src="assets/vendors/jquery-appear/jquery.appear.min.js"></script>
+<script src="assets/vendors/jquery-circle-progress/jquery.circle-progress.min.js"></script>
+<script src="assets/vendors/jquery-magnific-popup/jquery.magnific-popup.min.js"></script>
+<script src="assets/vendors/jquery-validate/jquery.validate.min.js"></script>
+<script src="assets/vendors/nouislider/nouislider.min.js"></script>
+<script src="assets/vendors/tiny-slider/tiny-slider.js"></script>
+<script src="assets/vendors/wnumb/wNumb.min.js"></script>
+<script src="assets/vendors/owl-carousel/js/owl.carousel.min.js"></script>
+<script src="assets/vendors/slick/slick.min.js"></script>
+<script src="assets/vendors/wow/wow.js"></script>
+<script src="assets/vendors/imagesloaded/imagesloaded.min.js"></script>
+<script src="assets/vendors/isotope/isotope.js"></script>
+<script src="assets/vendors/countdown/countdown.min.js"></script>
+<script src="assets/vendors/jquery-circleType/jquery.circleType.js"></script>
+<script src="assets/vendors/jquery-lettering/jquery.lettering.min.js"></script>
+<script src="assets/js/easilon.js"></script>
+<script src="assets/js/uv.js"></script>
+
+<script>
+/* Pop-in reveal for the contact page (left / right / up) */
+(function(){
+  var els=[].slice.call(document.querySelectorAll('.cp-rv'));
+  function show(el){
+    el.classList.add('cp-in');
+    setTimeout(function(){el.classList.add('cp-done')},1500);
+  }
+  if(!('IntersectionObserver' in window)){els.forEach(show);return}
+  var io=new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if(e.isIntersecting){show(e.target);io.unobserve(e.target)}
+    });
+  },{threshold:.12});
+  els.forEach(function(el){io.observe(el)});
+})();
+</script>
+</body>
+</html>
